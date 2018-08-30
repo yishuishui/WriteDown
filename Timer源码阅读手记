@@ -122,8 +122,83 @@
         }
     }
 -------------------------------------------------------------------------------------------------------------------
+接着，我们来看看TimerThread中的run方法。
+public void run() {
+    try {
+        mainLoop();
+    } finally {
+        // Someone killed this Thread, behave as if Timer cancelled
+        synchronized(queue) {
+            newTasksMayBeScheduled = false;
+            queue.clear();  // Eliminate obsolete references
+        }
+    }
+}
+这里，我们重点分析mainLoop方法，这个是定时器调度任务的基础。
+private void mainLoop() {
+    while (true) {
+        try {
+            TimerTask task;
+            boolean taskFired;
+            synchronized(queue) {
+                // 如果队列是空 且 newTasksMayBeScheduled 是 true，阻塞等待
+                while (queue.isEmpty() && newTasksMayBeScheduled)
+                    queue.wait();
+                // 如果被唤醒了，且队列还是空，跳出循环结束。
+                if (queue.isEmpty())
+                    break; // Queue is empty and will forever remain; die
+                // Queue nonempty; look at first evt and do the right thing
+                long currentTime, executionTime;
+                // 拿到队列中第一个任务。
+                task = queue.getMin();
+                synchronized(task.lock) {// 对这个任务进行同步
+                    // 如果取消了，就删除这个任务，并跳过这次循环
+                    if (task.state == TimerTask.CANCELLED) {
+                        queue.removeMin();
+                        continue;  // No action required, poll queue again
+                    }
+                    currentTime = System.currentTimeMillis();
+                    executionTime = task.nextExecutionTime;
+                    // 如果任务的下次执行时间小于当前时间，
+                    if (taskFired = (executionTime<=currentTime)) {
+                        // 且任务是不重复的
+                        if (task.period == 0) { // Non-repeating, remove
+                            // 删除这个任务
+                            queue.removeMin();
+                            // 修改状态
+                            task.state = TimerTask.EXECUTED;
+                        } else { // Repeating task, reschedule
+                            // 如果任务是重复的。重新调度任务时间，以便下次执行。
+                            queue.rescheduleMin(
+                              task.period<0 ? currentTime   - task.period
+                                            : executionTime + task.period);
+                        }
+                    }
+                }
+                // 如果时间没到，就等代指定时间
+                if (!taskFired) // Task hasn't yet fired; wait
+                    queue.wait(executionTime - currentTime);
+            }
+            // 如果时间到了，就执行任务。
+            if (taskFired)  // Task fired; run it, holding no locks
+                task.run();
+        } catch(InterruptedException e) {
+            // 如果有中断异常就忽略。
+        }
+    }
+}
+总结：在我们创建Timer对象的时候，其实就启动了TimerThread线程。在我们调用schedule或者scheduleAtFixedRate时候，
+     我们将我们的任务（也就是Runnable对象）包装成TimerTask对象，以及延迟参数和周期参数传递进task队列中。
+     这样TimerThread在执行任务的时候拿到这个任务的这些参数，从而判断是一次性任务还是周期性任务（通过period是否为0），
+     然后继续将任务添加到Queue中。每次去Queue中去任务的时候，都是取最小的任务，也就是离当前时间最近的任务进行处理。
+-------------------------------------------------------------------------------------------------------------------
 总结
 （1）创建Timer定时器，有4个构造函数，默认会设置一个“Timer-自增数字”的名字。其他构造函数可以设置名字、设置守护线程。
 （2）每个Timer中包含了一个TimerThread，也就是说一个定时器就是一个线程。
      每个Timer中还包含了一个TaskQueue，从上面我们知道这个Queue就是装着TimerTask的对象。
-（3）
+（3）在调用schedule/scheduleAtFixedRate的时候,会将这些参数放到自定义的TimerTask对象中，然后丢到Queue中。
+（4）在TimerThread进行调度任务的时候，会取到队列中的每一个任务，然后阻塞任务知道执行完成。
+     如果是周期性任务，会重新包装成task放到Queue中。否则执行完成，退出线程了。
+（5）mainLoop方法忽略了线程中断异常。当 wait 方法中断异常的时候，是不起作用的。
+     mainLoop方法值只捕获线程中断异常，如果发生了其他异常，整个 Timer 就会停止。
+ ------------------------------------------------------------------------------------------------------------------
