@@ -8,9 +8,11 @@
 ---------------------------------------------------------------------------------------------------------------        
 默认的构造函数有以下几个：
 （1）
+``` java
     public Timer() {
         this("Timer-" + serialNumber());
     }
+```
     这个构造函数调用了另一个构造函数，从而给线程设置一个默认的名字。这个名字就是Timer-加上一个serialNumber();
     我们来看看这个serialNumber()是什么鬼？
     private final static AtomicInteger nextSerialNumber = new AtomicInteger(0);
