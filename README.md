@@ -10,3 +10,11 @@ JAVA学习JDK源码笔记'，'欢迎分享，请注明来源
 *[第四篇：ScheduledThreadPoolExecutor源码解析]()
 
 *[第五篇：Lock源码解析]()
+
+*[第六篇：ReentrantLook源码解析]()
+
+*[第七篇：ReentrantLock之公平锁和非公平锁源码解析]()
+
+*[第八篇：StampedLock源码解析]()
+
+
