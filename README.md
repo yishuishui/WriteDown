@@ -16,3 +16,4 @@
 
 ## 数据结构和算法篇
 * [第一篇：线段树实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%E7%BA%BF%E6%AE%B5%E6%A0%91)
+* [第二篇：字典树Trie的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E9%AB%98%E7%BA%A7%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89Trie%E6%A0%91)
