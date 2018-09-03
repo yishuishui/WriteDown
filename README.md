@@ -19,6 +19,4 @@
 * [第二篇：字典树Trie的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E9%AB%98%E7%BA%A7%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89Trie%E6%A0%91)
 * [第三篇：AVL树的实现与使用]()
 * [第四篇：红黑树的实现与使用]()
-
-
 * [第五篇：单链表的实现与使用]()
