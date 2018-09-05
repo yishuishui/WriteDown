@@ -22,7 +22,8 @@
 * [第五篇：单链表的实现与使用]()
 * [第六篇：数组的实现与使用]()
 * [第七篇：堆与优先队列的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E5%A0%86%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0)
-
+* [第八篇：二分搜索树(BST)的实现与使用]
+(https://github.com/yishuishui/WriteDown/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91%EF%BC%88Binary-Search-Tree%EF%BC%89)
 
 ## 数据库学习篇
 * [第一篇：SQL语句学习]()
