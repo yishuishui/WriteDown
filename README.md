@@ -14,9 +14,9 @@
 * [第十二篇：LinkedList源码解析]()
 
 ## 数据结构和算法篇
-* [第一篇：动态数组的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%BA%94%E7%94%A8)
-* [第二篇：栈和队列的实现与使用]()
-* [第三篇：链表的实现与使用]()
+* [第一篇：动态数组的实现与使用(已完成)](https://github.com/yishuishui/WriteDown/wiki/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%BA%94%E7%94%A8)
+* [第二篇：栈和队列的实现与使用(更新中)]()
+* [第三篇：链表的实现与使用(更新中)]()
 * [第四篇：堆与优先队列的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E5%A0%86%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0)
 * [第五篇：二分搜索树(BST)的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91%EF%BC%88Binary-Search-Tree%EF%BC%89)
 * [第六篇：AVL树的实现与使用](https://github.com/yishuishui/WriteDown/wiki/ALV%E6%A0%91%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BD%BF%E7%94%A8)
