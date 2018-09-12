@@ -1,5 +1,5 @@
 # WriteDown
-## JAVA学习JDK源码笔记
+## JDK源码解读篇
 * [第一篇：Timer定时器源码解析](https://github.com/yishuishui/WriteDown/wiki/Timer%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB)
 * [第二篇：线程池源码解析]()
 * [第三篇：FutureTask源码解析](https://github.com/yishuishui/WriteDown/wiki/FutureTask%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90)
@@ -26,7 +26,7 @@
 * [第十篇：HashMap的实现与使用]()
 * [第十一篇：HashSet的实现与使用]()
 
-## 数据库学习篇
+## 数据库篇
 * [第一篇：SQL语句学习]()
 * [第二篇：JDBC编程]()
 ## Netty源码及使用篇
