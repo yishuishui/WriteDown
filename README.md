@@ -19,12 +19,14 @@
 * [第三篇：链表的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E9%93%BE%E8%A1%A8%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BD%BF%E7%94%A8)
 * [第四篇：堆与优先队列的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E5%A0%86%E4%B8%8E%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0)
 * [第五篇：二分搜索树的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91%EF%BC%88Binary-Search-Tree%EF%BC%89)
-* [第六篇：AVL树的实现与使用](https://github.com/yishuishui/WriteDown/wiki/ALV%E6%A0%91%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BD%BF%E7%94%A8)
-* [第七篇：红黑树的实现与使用]()
-* [第八篇：线段树实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%E7%BA%BF%E6%AE%B5%E6%A0%91)
-* [第九篇：字典树Trie的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E9%AB%98%E7%BA%A7%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89Trie%E6%A0%91)
+* [第六篇：Set和Map](https://github.com/yishuishui/WriteDown/wiki/Set%E5%92%8CMap)
+* [第七篇：AVL树的实现与使用](https://github.com/yishuishui/WriteDown/wiki/ALV%E6%A0%91%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BD%BF%E7%94%A8)
+* [第八篇：红黑树的实现与使用]()
+* [第九篇：Hash表的实现与使用]()
 * [第十篇：HashMap的实现与使用]()
 * [第十一篇：HashSet的实现与使用]()
+* [补充篇：线段树实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%E7%BA%BF%E6%AE%B5%E6%A0%91)
+* 补充篇：字典树Trie的实现与使用](https://github.com/yishuishui/WriteDown/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E9%AB%98%E7%BA%A7%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89Trie%E6%A0%91)
 
 ## 数据库篇
 * [第一篇：SQL语句学习](https://github.com/yishuishui/WriteDown/wiki/SQL%E8%AF%AD%E5%8F%A5%E5%AD%A6%E4%B9%A0)
